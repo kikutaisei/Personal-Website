@@ -22,6 +22,7 @@ body{
     font-size: 1.2rem;
     background-color: #FFF;
     box-shadow: 0 1px 5px 0 #000;
+    z-index: 10; /* Makes sure the navbar is on top of all other content */
 }
 
 .navbar-links{
@@ -98,3 +99,34 @@ body{
         display: none;
     }
 }
+
+/* - - - STYLING AND MEDIA QUERIES FOR THE HOME SECTION - - - */
+.home-section{
+    width: 100%;
+    height: 100vh;
+    position: relative; /* Makes sure overlapping content can be done by setting position as relative */
+    background-image: url(/media/image-1.JPG);
+    background-size: cover;
+}
+
+.home-section-overlay{
+    position: absolute; /* Makes sure the overlay is positioned relative to the home-section element */
+    top: 0; /* Makes sure the overlay is 0 from the top of the home-section */
+    bottom: 0; /* Makes sure the overlay is 0 from the bottom of the home-section */
+    left: 0; /* Makes sure the overlay is 0 from the left of the home-section */
+    right: 0; /* Makes sure the overlay is 0 from the right of the home-section */
+    background-color: #000;
+    opacity: 0.2;
+    animation: overlay-fade-in 2s;
+}
+
+/* Fade in animation on page load for the overlay */
+@keyframes overlay-fade-in{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0.2;
+    }
+}
+
