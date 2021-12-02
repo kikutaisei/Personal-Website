@@ -80,7 +80,7 @@ body{
 }
 
 /* Media queries for larger screens */
-@media (min-width: 600px){
+@media (min-width: 700px){
     .navbar{
         flex-direction: row;
         align-items: center;
@@ -117,16 +117,106 @@ body{
     right: 0; /* Makes sure the overlay is 0 from the right of the home-section */
     background-color: #000;
     opacity: 0.2;
-    animation: overlay-fade-in 2s;
 }
 
-/* Fade in animation on page load for the overlay */
-@keyframes overlay-fade-in{
-    from{
-        opacity: 1;
+.home-section-content{
+    padding-top: 4rem; /* Makes sure content is pushed down to prevent the navbar from overlapping it */
+    position: absolute; /* Makes sure the content is positioned relative to the home-section element */
+    top: 0; /* Makes sure the content is 0 from the top of the home-section */
+    bottom: 0; /* Makes sure the content is 0 from the bottom of the home-section */
+    left: 0; /* Makes sure the content is 0 from the left of the home-section */
+    right: 0; /* Makes sure the content is 0 from the right of the home-section */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home-section-titles{
+    width: 100%;
+    color: #FFF;
+    text-align: center;
+}
+
+.home-section-titles h1{
+    font-size: 3.5rem;
+}
+
+.home-section-titles h2{
+    font-size: 1.5rem;
+}
+
+.home-section-titles a{
+    width: 50%;
+    margin: 1.5rem auto 0 auto; /* Determines the space between the button and h1/h2 text above it */
+    padding: 1rem; /* Determines the space between the text inside the button and its clicable area */
+    display: block; /* Makes the button a block element rather than being an inline element */
+    text-decoration: none;
+    color: #FFF;
+    background-color: #FF1616;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.home-section-titles a:hover{
+    background-color: #FF914D;
+}
+
+.home-section-memoji{
+    width: 60%;
+}
+
+.home-section-memoji img{
+    width: 100%;
+    object-fit: cover;
+}
+
+/* Media queries for landscape phones */
+@media (min-width: 700px){
+    .home-section-content{
+        flex-direction: row;
     }
-    to{
-        opacity: 0.2;
+
+    .home-section-titles{
+        width: 50%;
+    }
+
+    .home-section-memoji{
+        width: 35%;
     }
 }
 
+/* Media queries for large screens */
+@media (min-width: 1000px){
+    .home-section-content{
+        flex-direction: row;
+    }
+
+    .home-section-titles h1{
+        font-size: 5rem;
+    }
+
+    .home-section-titles h2{
+        font-size: 2rem;
+    }
+
+    .home-section-titles a{
+        font-size: 1.5rem;
+    }
+}
+
+/* Media queries for extra large screens */
+@media (min-width: 1350px){
+    .home-section-titles h1{
+        font-size: 7rem;
+    }
+
+    .home-section-titles h2{
+        font-size: 3rem;
+    }
+
+    .home-section-titles a{
+        font-size: 2rem;
+    }
+}
