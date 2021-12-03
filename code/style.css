@@ -11,7 +11,7 @@ body{
 }
 
 /* - - - STYLING AND MEDIA QUERIES FOR THE NAVBAR - - - */
-.navbar{
+#navbar{
     width: 100%;
     position: fixed;
     top: 0;
@@ -65,6 +65,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    cursor: pointer;
 }
 
 .menu-button .bar{
@@ -81,7 +82,7 @@ body{
 
 /* Media queries for larger screens */
 @media (min-width: 700px){
-    .navbar{
+    #navbar{
         flex-direction: row;
         align-items: center;
     }
@@ -101,7 +102,7 @@ body{
 }
 
 /* - - - STYLING AND MEDIA QUERIES FOR THE HOME SECTION - - - */
-.home-section{
+#home-section{
     width: 100%;
     height: 100vh;
     position: relative; /* Makes sure overlapping content can be done by setting position as relative */
@@ -139,7 +140,7 @@ body{
 }
 
 .home-section-titles h1{
-    font-size: 3.5rem;
+    font-size: 3rem;
 }
 
 .home-section-titles h2{
@@ -147,7 +148,7 @@ body{
 }
 
 .home-section-titles a{
-    width: 50%;
+    width: 55%;
     margin: 1.5rem auto 0 auto; /* Determines the space between the button and h1/h2 text above it */
     padding: 1rem; /* Determines the space between the text inside the button and its clicable area */
     display: block; /* Makes the button a block element rather than being an inline element */
@@ -160,7 +161,7 @@ body{
 }
 
 .home-section-titles a:hover{
-    background-color: #FF914D;
+    background-color: #FFBD59;
 }
 
 .home-section-memoji{
@@ -173,7 +174,7 @@ body{
 }
 
 /* Media queries for landscape phones */
-@media (min-width: 700px){
+@media (min-width: 600px){
     .home-section-content{
         flex-direction: row;
     }
@@ -218,5 +219,91 @@ body{
 
     .home-section-titles a{
         font-size: 2rem;
+    }
+}
+
+/* - - - STYLING AND MEDIA QUERIES FOR THE ABOUT SECTION - - - */
+#about-section{
+    width: 100%;
+    padding: 4rem 0 2rem 0;
+    background-color: #FFBD59;
+    text-align: center;
+}
+
+#about-section h2{
+    font-size: 3rem;
+}
+
+.introduction{
+    width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.introduction-text{
+    width: 100%;
+}
+
+.introduction-text h3{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.introduction-text p{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.introduction-image{
+    width: 100%;
+}
+
+.introduction-image img{
+    width: 100%;
+    object-fit: cover;
+    box-shadow: 1px 1px 5px 0 #000;
+}
+
+/* Media queries for landscape phones */
+@media (min-width: 700px){
+    .introduction{
+        width: 80%;
+    }
+}
+
+/* Media queries for large screens */
+@media (min-width: 1000px){
+    .introduction{
+        width: 100%;
+        margin: 1rem 0;
+        padding: 0;
+        flex-direction: row;
+    }
+
+    .introduction-text{
+        width: 50%;
+    }
+
+    .introduction-image{
+        width: 40%;
+    }
+}
+
+/* Media queries for extra large screens */
+@media (min-width: 1350px){
+    #about-section h2{
+        font-size: 4rem;
+    }
+
+    .introduction-text h3{
+        font-size: 3rem;
+    }
+
+    .introduction-text p{
+        font-size: 1.5rem;
     }
 }

@@ -11,19 +11,19 @@
 <body>
 
     <!-- - - - NAVBAR - - - -->
-    <nav class="navbar">
+    <nav id="navbar">
         <div class="navbar-logo">
             <a href="index.html">KIKUTAISEI</a>
         </div>
-        <a href="#" class="menu-button">
+        <div class="menu-button">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>
-        </a>
+        </div>
         <div class="navbar-links">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="#home-section">Home</a></li>
+                <li><a href="#about-section">About</a></li>
                 <li><a href="#">Projects</a></li>
                 <li><a href="#">Contact</a></li>
             </ul>
@@ -31,16 +31,36 @@
     </nav>
 
     <!-- - - - HOME SECTION - - - -->
-    <section class="home-section">
+    <section id="home-section">
         <div class="home-section-overlay"></div>
         <div class="home-section-content">
             <div class="home-section-titles">
                 <h1>Taisei Kikuta</h1>
                 <h2>Sports Science Student &<br>Aspiring Software Developer</h2>
-                <a href="#">More About Me</a>
+                <a href="#about-section">More About Me</a>
             </div>
             <div class="home-section-memoji">
                 <img src="/media/memoji-1.png" alt="Taisei Waving Memoji">
+            </div>
+        </div>
+    </section>
+
+    <!-- - - - ABOUT SECTION - - - -->
+    <section id="about-section">
+        <h2>About</h2>
+        <div class="introduction">
+            <div class="introduction-text">
+                <h3>Who Am I</h3>
+                <p>
+                    Hello, my name is Taisei. I'm a Sports Science student in Loughborough University. It's the UK's best university for sports-related subjects.
+                    <br><br>
+                    I enjoy the course and find it very interesting, but I've also always had a passion for technology and the tech industry. Rather than specialising in just one field, I believe it would be best if I can combine both!
+                    <br><br>
+                    I've had a long educational background with computer science at school and now I'm creating personal projects including this website!
+                </p>
+            </div>
+            <div class="introduction-image">
+                <img src="/media/image-2.jpeg" alt="Loughborough University">
             </div>
         </div>
     </section>

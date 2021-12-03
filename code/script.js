@@ -1,7 +1,7 @@
 // - - - SCRIPT FOR THE NAVBAR - - -
 const navbarTimeline = gsap.timeline({defaults: {duration: 0.5, y: "-250%", ease: "back"}});
 navbarTimeline
-  .from(".navbar", {duration: 1, y: "-100%", ease: "bounce"})
+  .from("#navbar", {duration: 1, y: "-100%", ease: "bounce"})
   .from(".navbar-logo", {})
   .from(".menu-button, .navbar-links li", {stagger: 0.2})
 
