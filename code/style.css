@@ -1,4 +1,4 @@
-/* - - - RESET/DEFAULT STYLING - - - */
+/* - - - RESETS/DEFAULTS - - - */
 *{
     margin: 0;
     padding: 0;
@@ -10,7 +10,7 @@ body{
     font-family: "Rubik", sans-serif;
 }
 
-/* - - - STYLING AND MEDIA QUERIES FOR THE NAVBAR - - - */
+/* - - - NAVBAR - - - */
 #navbar{
     width: 100%;
     position: fixed;
@@ -80,7 +80,7 @@ body{
     background-color: #FF1616;
 }
 
-/* Media queries for larger screens */
+/* Large Screens */
 @media (min-width: 700px){
     #navbar{
         flex-direction: row;
@@ -101,7 +101,7 @@ body{
     }
 }
 
-/* - - - STYLING AND MEDIA QUERIES FOR THE HOME SECTION - - - */
+/* - - - HOME SECTION - - - */
 #home-section{
     width: 100%;
     height: 100vh;
@@ -173,7 +173,7 @@ body{
     object-fit: cover;
 }
 
-/* Media queries for landscape phones */
+/* Landscape Phones */
 @media (min-width: 600px){
     .home-section-content{
         flex-direction: row;
@@ -188,7 +188,7 @@ body{
     }
 }
 
-/* Media queries for large screens */
+/* Medium Screens */
 @media (min-width: 1000px){
     .home-section-content{
         flex-direction: row;
@@ -207,7 +207,7 @@ body{
     }
 }
 
-/* Media queries for extra large screens */
+/* Large Screens */
 @media (min-width: 1350px){
     .home-section-titles h1{
         font-size: 7rem;
@@ -222,10 +222,10 @@ body{
     }
 }
 
-/* - - - STYLING AND MEDIA QUERIES FOR THE ABOUT SECTION - - - */
+/* - - - ABOUT SECTION - - - */
 #about-section{
-    width: 100%;
-    padding: 4rem 0 2rem 0;
+    width: 100%; /* Makes sure text and other content doesn't touch the sides of the viewport */
+    padding: 4rem 2rem; /* First value makes sure content is pushed down to prevent the navbar from overlapping it and second value makes sure content doesn't touch the sides of the screen */
     background-color: #FFBD59;
     text-align: center;
 }
@@ -236,8 +236,7 @@ body{
 
 .introduction, .my-background{
     width: 100%;
-    margin: 2rem auto;
-    padding: 1rem;
+    margin: 1rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -249,87 +248,71 @@ body{
 }
 
 .introduction-text h3, .my-background-text h3{
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     font-size: 2rem;
 }
 
 .introduction-text p, .my-background-text p{
-    margin-bottom: 1rem;
+    margin: 1rem 0;
     font-size: 1.2rem;
 }
 
-.introduction-image{
+.introduction-image, .my-background-image{
     width: 100%;
-}
-
-.my-background-image{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+    margin: 1rem 0;
 }
 
 .introduction-image img, .my-background-image img{
     width: 100%;
-    margin-top: 1.5rem;
     object-fit: cover;
-    box-shadow: 1px 1px 5px 0 #000;
+    box-shadow: 0 1px 5px 0 #000;
 }
 
-/* Media queries for landscape phones */
-@media (min-width: 700px){
-    .introduction, .my-background{
-        width: 80%;
+/* Landscape Phones */
+@media (min-width: 600px){
+    #about-section{
+        padding: 4rem 6rem;
     }
 
     .introduction-image, .my-background-image{
-        width: 80%;
+        width: 75%;
     }
 }
 
-/* Media queries for large screens */
+/* Medium Screens */
 @media (min-width: 1000px){
-    .introduction{
-        width: 100%;
-        margin: 1rem 0;
-        padding: 0;
-        flex-direction: row;
+    #about-section{
+        padding: 4rem 10rem;
     }
 
-    .introduction-text{
-        width: 50%;
-    }
-
-    .introduction-image{
-        width: 40%;
-    }
-
-    .my-background{
-        width: 80%;
-    }
-
-    .my-background-image{
-        width: 100%;
-        flex-direction: row;
-    }
-
-    .my-background-image img{
-        width: 30%;
-    }
-}
-
-/* Media queries for extra large screens */
-@media (min-width: 1350px){
     #about-section h2{
-        font-size: 4rem;
+        font-size: 3.5rem;
     }
 
     .introduction-text h3, .my-background-text h3{
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
 
     .introduction-text p, .my-background-text p{
         font-size: 1.5rem;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1200px){
+    #about-section{
+        padding: 4rem 2rem;
+    }
+
+    .introduction, .my-background{
+        flex-direction: row;
+    }
+
+    .introduction-text, .my-background-text{
+        width: 50%;
+    }
+
+    .introduction-image, .my-background-image{
+        width: 35%;
     }
 }
