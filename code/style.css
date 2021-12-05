@@ -45,7 +45,7 @@ body{
     display: block;
     text-decoration: none;
     color: #000;
-    transition: color 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .navbar-logo a:hover, .navbar-links a:hover{
@@ -73,7 +73,7 @@ body{
     height: 3px;
     background-color: #000;
     border-radius: 10px;
-    transition: background-color 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .menu-button:hover .bar{
@@ -148,7 +148,7 @@ body{
 }
 
 .home-section-titles a{
-    width: 55%;
+    width: 50%;
     margin: 1.5rem auto 0 auto; /* Determines the space between the button and h1/h2 text above it */
     padding: 1rem; /* Determines the space between the text inside the button and its clicable area */
     display: block; /* Makes the button a block element rather than being an inline element */
@@ -157,7 +157,7 @@ body{
     background-color: #FF1616;
     font-size: 1.2rem;
     border-radius: 2rem;
-    transition: background-color 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
 }
 
 .home-section-titles a:hover{
@@ -210,7 +210,7 @@ body{
 /* Large Screens */
 @media (min-width: 1350px){
     .home-section-titles h1{
-        font-size: 7rem;
+        font-size: 6rem;
     }
 
     .home-section-titles h2{
@@ -234,25 +234,25 @@ body{
     font-size: 3rem;
 }
 
-.introduction, .my-background{
+.introduction, .my-background, .places-been{
     width: 100%;
-    margin: 1rem 0;
+    margin: 2rem 0;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
 
-.introduction-text, .my-background-text{
+.introduction-text, .my-background-text, .places-been-text{
     width: 100%;
 }
 
-.introduction-text h3, .my-background-text h3{
+.introduction-text h3, .my-background-text h3, .places-been-text h3{
     margin: 1rem 0;
     font-size: 2rem;
 }
 
-.introduction-text p, .my-background-text p{
+.introduction-text p, .my-background-text p, .places-been-text p{
     margin: 1rem 0;
     font-size: 1.2rem;
 }
@@ -268,6 +268,89 @@ body{
     box-shadow: 0 1px 5px 0 #000;
 }
 
+.slideshow-container{
+    width: 100%; /* Makes sure the fixed width doesn't change with photos of different aspect ratios  */
+    height: 15rem; /* Makes sure the fixed height doesn't change with photos of different aspect ratios */
+    margin: 1rem auto;
+    position: relative; /* Allows the prev and next buttons can be placed on top of the container */
+    border: 0.2rem solid #000;
+    background-color: #FFF;
+}
+
+.slide{
+    width: 100%; /* Makes sure the width of the slides fill the container */
+    height: 100%; /* Makes sure the height of the slides fill the container */
+    display: none; /* Setting display as none by default and using JS to display a specific slide */
+}
+
+.slide img{
+    width: 100%; /* Makes sure the width of the image fills the slide */
+    height: 85%; /* Makes sure the height of the image goes down to 90% of the slide */
+    object-fit: cover; /* Maintains the fixed width and height of the container by cropping where necessary */
+}
+
+.slide div{
+    width: 100%; /* Makes sure the width of the caption fills the slide */
+    height: 1rem; /* Makes sure the height of the caption fills the remaining space of the slide */
+    padding-top: 0.2rem;
+    font-size: 1.2rem;
+    background-color: #FFF;
+}
+
+.prev-button{
+    width: 2rem;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #000;
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+
+.next-button{
+    width: 2rem;
+    position: absolute;
+    top: 40%;
+    right: 0;
+    font-size: 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #000;
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+
+.prev-button:hover, .next-button:hover{
+    opacity: 1;
+    background-color: #FF1616;
+}
+
+.slideshow-indicator{
+    width: 100%;
+    margin: 1rem auto;
+}
+
+.indicator-button{
+    width: 1rem;
+    height: 1rem;
+    margin: 0.2rem;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #FFF;
+    border: 0.1rem solid #000;
+    border-radius: 2rem;
+    transition: 0.3s ease-in-out;
+}
+
+.indicator-button.active, .indicator-button:hover{
+    background-color: #FF1616;
+}
+
 /* Landscape Phones */
 @media (min-width: 600px){
     #about-section{
@@ -277,6 +360,15 @@ body{
     .introduction-image, .my-background-image{
         width: 75%;
     }
+
+    .slideshow-container{
+        width: 90%;
+        height: 20rem;
+    }
+
+    .slide div{
+        padding-top: 0.5rem;
+    }
 }
 
 /* Medium Screens */
@@ -285,16 +377,29 @@ body{
         padding: 4rem 10rem;
     }
 
-    #about-section h2{
-        font-size: 3.5rem;
+    .slideshow-container{
+        width: 100%;
+        height: 30rem;
     }
 
-    .introduction-text h3, .my-background-text h3{
-        font-size: 2.5rem;
+    .slide img{
+        height: 90%;
     }
 
-    .introduction-text p, .my-background-text p{
-        font-size: 1.5rem;
+    .slide div{
+        padding-top: 0.5rem;
+    }
+
+    .prev-button{
+        width: 2.5rem;
+        top: 45%;
+        font-size: 2rem;
+    }
+
+    .next-button{
+        width: 2.5rem;
+        top: 45%;
+        font-size: 2rem;
     }
 }
 
@@ -314,5 +419,14 @@ body{
 
     .introduction-image, .my-background-image{
         width: 35%;
+    }
+
+    .slideshow-container{
+        width: 60%;
+        height: 35rem;
+    }
+
+    .slide div{
+        padding-top: 0.7rem;
     }
 }
