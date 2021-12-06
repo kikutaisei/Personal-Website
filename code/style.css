@@ -225,18 +225,19 @@ body{
 /* - - - ABOUT SECTION - - - */
 #about-section{
     width: 100%; /* Makes sure text and other content doesn't touch the sides of the viewport */
-    padding: 4rem 2rem; /* First value makes sure content is pushed down to prevent the navbar from overlapping it and second value makes sure content doesn't touch the sides of the screen */
-    background-color: #FFBD59;
+    padding: 4rem 2rem 1rem 2rem; /* 4rem pushes content downwards to prevent navbar overlap, 2rem makes sure content doesn(t touch sides, 1rem makes sure bottom is not exposed */
+    background-color: #FFBF69;
     text-align: center;
 }
 
 #about-section h2{
+    margin-bottom: 2rem; /* Adds spacing between "About" and "Who Am I" */
     font-size: 3rem;
 }
 
 .introduction, .my-background, .places-been{
     width: 100%;
-    margin: 2rem 0;
+    margin-bottom: 2rem; /* Adds spacing between the sub-sections */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -354,7 +355,7 @@ body{
 /* Landscape Phones */
 @media (min-width: 600px){
     #about-section{
-        padding: 4rem 6rem;
+        padding: 4rem 6rem 1rem 6rem;
     }
 
     .introduction-image, .my-background-image{
@@ -374,7 +375,7 @@ body{
 /* Medium Screens */
 @media (min-width: 1000px){
     #about-section{
-        padding: 4rem 10rem;
+        padding: 4rem 10rem 1rem 10rem;
     }
 
     .slideshow-container{
@@ -406,11 +407,15 @@ body{
 /* Large Screens */
 @media (min-width: 1200px){
     #about-section{
-        padding: 4rem 2rem;
+        padding: 4rem 2rem 1rem 2rem;
     }
 
     .introduction, .my-background{
         flex-direction: row;
+    }
+
+    .introduction, .my-background, .places-been{
+        margin-bottom: 4rem;
     }
 
     .introduction-text, .my-background-text{
