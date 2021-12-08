@@ -435,3 +435,95 @@ body{
         padding-top: 0.7rem;
     }
 }
+
+/* - - - PORTFOLIO SECTION - - - */
+#portfolio-section{
+    width: 100%; /* Makes sure text and other content doesn't touch the sides of the viewport */
+    padding: 4rem 2rem 1rem 2rem; /* 4rem pushes content downwards to prevent navbar overlap, 2rem makes sure content doesn(t touch sides, 1rem makes sure bottom is not exposed */
+    background-color: #C0F0F7;
+    text-align: center;
+}
+
+#portfolio-section h2{
+    margin-bottom: 2rem; /* Adds spacing between "Portfolio" and "Skills" */
+    font-size: 3rem;
+}
+
+.skills{
+    width: 100%;
+    margin-bottom: 2rem;
+}
+
+.skills-text{
+    width: 100%;
+}
+
+.skills-text h3{
+    margin: 1rem 0;
+    font-size: 2rem;
+}
+
+.skills-text p{
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.skills-grid{
+    width: 100%;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-columns: 7rem 7rem;
+    grid-template-rows: 7rem 7rem 7rem 7rem;
+    grid-row-gap: 1rem;
+    justify-content: space-around;
+}
+
+.skills-grid-div{
+    position: relative; /* Adding position relative to allow the caption text to go on top */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skills-grid-div img{
+    width: 90%;
+    transition: 0.3s ease-in-out;
+}
+
+.skills-grid-div img:hover{
+    width: 100%;
+}
+
+/* Landscape Phones */
+@media (min-width: 600px){
+    #portfolio-section{
+        padding: 4rem 6rem 1rem 6rem;
+    }
+
+    .skills-grid{
+        grid-template-columns: 7rem 7rem 7rem 7rem;
+        grid-template-rows: 7rem 7rem;
+    }
+}
+
+/* Medium Screens */
+@media (min-width: 1000px){
+    #portfolio-section{
+        padding: 4rem 10rem 1rem 10rem;
+    }
+
+    .skills-grid{
+        grid-row-gap: 2rem;
+    }
+}
+
+/* Large Screens */
+@media (min-width: 1200px){
+    #portfolio-section{
+        padding: 4rem 2rem 1rem 2rem;
+    }
+
+    .skills-grid{
+        width: 70%;
+    }
+}
