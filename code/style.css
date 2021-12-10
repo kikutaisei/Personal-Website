@@ -51,7 +51,6 @@ img{
     display: block;
     text-decoration: none;
     color: #000;
-    transition: 0.3s ease-in-out;
 }
 
 .navbar-logo a{
@@ -83,14 +82,12 @@ img{
     height: 3px;
     background-color: #000;
     border-radius: 10px;
-    transition: 0.3s ease-in-out;
 }
 
 .menu-button:hover .bar{
     background-color: #FF1616;
 }
 
-/* Any Bigger Screens */
 @media (min-width: 1000px){
     #navbar{
         flex-direction: row;
@@ -169,18 +166,16 @@ img{
     background-color: #FF1616;
     font-size: 1.2rem;
     border-radius: 2rem;
-    transition: 0.3s ease-in-out;
 }
 
 .home-section-titles a:hover{
-    background-color: #FFBD59;
+    background-color: #FFBF69;
 }
 
 .home-section-memoji{
     width: 60%;
 }
 
-/* Landscape Phones */
 @media (min-width: 650px){
     .home-section-content{
         flex-direction: row;
@@ -195,7 +190,6 @@ img{
     }
 }
 
-/* Medium Screens */
 @media (min-width: 1000px){
     .home-section-titles h1{
         font-size: 5rem;
@@ -210,7 +204,6 @@ img{
     }
 }
 
-/* Large Screens */
 @media (min-width: 1250px){
     .home-section-titles h1{
         font-size: 6rem;
@@ -222,5 +215,168 @@ img{
 
     .home-section-titles a{
         font-size: 2rem;
+    }
+}
+
+/* ABOUT SECTION */
+#about-section{
+    padding: 4rem 2rem 2rem 2rem; /* Makes sure content isn't covered by navbar and isn't contacting the sides */
+    background-color: #FFBF69;
+}
+
+.about-section-title{
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.introduction, .my-background, .places-been{
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.introduction-text h3, .my-background-text h3, .places-been-text h3{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.introduction-text p, .my-background-text p, .places-been-text p{
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.introduction-image img, .my-background-image img{
+    box-shadow: 0 0.2rem 0.5rem 0 #000;
+}
+
+.places-been-slideshow{
+    margin-bottom: 1rem;
+    height: 15rem;
+    position: relative;
+    border: 0.2rem solid #000;
+    background-color: #FFF;
+}
+
+.slide{
+    height: 100%;
+    display: none;
+}
+
+.slide img{
+    height: 85%;
+}
+
+.slide div{
+    height: 1rem;
+    padding-top: 0.2rem;
+    font-size: 1.2rem;
+}
+
+.prev-button, .next-button{
+    width: 2.5rem;
+    position: absolute;
+    top: 40%;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    color: #FFF;
+    background-color: #000;
+    opacity: 0.5;
+}
+
+.prev-button{
+    left: 0;
+}
+
+.next-button{
+    right: 0;
+}
+
+.prev-button:hover, .next-button:hover{
+    opacity: 1;
+    background-color: #FF1616;
+}
+
+.indicator-button{
+    width: 1rem;
+    height: 1rem;
+    margin: 0.2rem;
+    display: inline-block;
+    cursor: pointer;
+    background-color: #FFF;
+    border: 0.1rem solid #000;
+    border-radius: 2rem;
+}
+
+.indicator-button.active, .indicator-button:hover{
+    background-color: #FF1616;
+}
+
+@media (min-width: 650px){
+    #about-section{
+        padding: 4rem 5rem 2rem 5rem;
+    }
+
+    .introduction-image, .my-background-image{
+        width: 70%;
+    }
+
+    .places-been-slideshow{
+        height: 25rem;
+    }
+
+    .slide img{
+        height: 90%;
+    }
+}
+
+@media (min-width: 1000px){
+    #about-section{
+        padding: 4rem 10rem 2rem 10rem;
+    }
+
+    .places-been-slideshow{
+        height: 30rem;
+    }
+
+    .slide div{
+        padding-top: 0.5rem;
+    }
+}
+
+@media (min-width: 1250px){
+    #about-section{
+        padding: 4rem 2rem 0.1rem 2rem;
+    }
+
+    .introduction, .my-background, .places-been{
+        margin-bottom: 5rem;
+    }
+
+    .introduction, .my-background{
+        flex-direction: row;
+    }
+
+    .introduction-text, .my-background-text{
+        width: 50%;
+    }
+
+    .introduction-text p, .my-background-text p{
+        margin-bottom: 0;
+    }
+
+    .introduction-image, .my-background-image{
+        width: 35%;
+    }
+
+    .places-been-slideshow{
+        width: 65%;
+        height: 35rem;
+    }
+
+    .slide div{
+        padding-top: 0.6rem;
     }
 }
