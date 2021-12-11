@@ -51,6 +51,7 @@ img{
     display: block;
     text-decoration: none;
     color: #000;
+    transition: 0.3s ease-in-out;
 }
 
 .navbar-logo a{
@@ -82,6 +83,7 @@ img{
     height: 3px;
     background-color: #000;
     border-radius: 10px;
+    transition: 0.3s ease-in-out;
 }
 
 .menu-button:hover .bar{
@@ -166,6 +168,7 @@ img{
     background-color: #FF1616;
     font-size: 1.2rem;
     border-radius: 2rem;
+    transition: 0.3s ease-in-out;
 }
 
 .home-section-titles a:hover{
@@ -284,6 +287,7 @@ img{
     color: #FFF;
     background-color: #000;
     opacity: 0.5;
+    transition: 0.3s ease-in-out;
 }
 
 .prev-button{
@@ -308,6 +312,7 @@ img{
     background-color: #FFF;
     border: 0.1rem solid #000;
     border-radius: 2rem;
+    transition: 0.3s ease-in-out;
 }
 
 .indicator-button.active, .indicator-button:hover{
@@ -378,5 +383,221 @@ img{
 
     .slide div{
         padding-top: 0.6rem;
+    }
+}
+
+/* - - - PORTFOLIO SECTION - - - */
+#portfolio-section{
+    padding: 4rem 2rem 2rem 2rem; /* Makes sure content isn't covered by navbar and isn't contacting the sides */
+    background-color: #C0F0F7;
+}
+
+.portfolio-section-title{
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.skills, .projects, .certificates{
+    margin-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.skills-text h3, .projects-text h3, .certificates-text h3{
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.skills-text p, .projects-text p, .certificates p{
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.skills-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.language{
+    width: 50%;
+    height: 8rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.language img{
+    width: 6rem;
+    transition: 0.3s ease-in-out;
+}
+
+.language img:hover{
+    width: 7rem;
+}
+
+.project{
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project-description h4{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.project-description p{
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.project-description div{
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.project-description img{
+    width: 20%;
+}
+
+.project-preview img{
+    margin-bottom: 1rem;
+    box-shadow: 0 0.2rem 0.5rem 0 #000;
+}
+
+.project-preview a{
+    width: 40%;
+    margin: 0 0.8rem;
+    padding: 0.5rem;
+    display: inline-block;
+    text-decoration: none;
+    color: #FFF;
+    background-color: #FF1616;
+    font-size: 1.2rem;
+    border-radius: 2rem;
+    transition: 0.3s ease-in-out;
+}
+
+.project-preview a:hover{
+    background-color: #FFC300;
+}
+
+.certificates-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.certificates-container a{
+    margin: 1rem auto;
+    box-shadow: 0 0.2rem 0.5rem 0 #000;
+    transition: 0.3s ease-in-out;
+}
+
+.certificates-container a:hover{
+    box-shadow: 0 0.2rem 0.5rem 0 #FFC300;
+}
+
+@media (min-width: 650px){
+    #portfolio-section{
+        padding: 4rem 5rem 2rem 5rem;
+    }
+
+    .language{
+        width: 30%;
+    }
+}
+
+@media (min-width: 1000px){
+    #potfolio-section{
+        padding: 4rem 10rem 2rem 10rem;
+    }
+
+    .skills-container{
+        width: 70%;
+    }
+
+    .language{
+        height: 10rem;
+    }
+    
+    .language img{
+        width: 8rem;
+    }
+    
+    .language img:hover{
+        width: 9rem;
+    }
+
+    .project{
+        margin-bottom: 2.5rem;
+    }
+
+    .project-description div{
+        width: 60%;
+        margin: 0 auto 2rem auto;
+    }
+
+    .project-description img{
+        width: 15%;
+    }
+
+    .certificates-container{
+        width: 70%;
+    }
+}
+
+@media (min-width: 1250px){
+    #portfolio-section{
+        padding: 4rem 2rem 0.1rem 2rem;
+    }
+
+    .skills, .projects{
+        margin-bottom: 5rem;
+    }
+
+    .skills-container{
+        width: 50%;
+    }
+
+    .project{
+        margin-bottom: 3rem;
+        flex-direction: row;
+    }
+
+    .project-description{
+        width: 50%;
+    }
+
+    .project-description div{
+        width: 70%;
+        margin: 0 auto 0 auto;
+    }
+
+    .project-description img{
+        width: 15%;
+    }
+
+    .project-preview{
+        width: 40%;
+    }
+
+    .certificates-container{
+        width: 100%;
+        flex-direction: row;
+    }
+
+    .certificates-container a{
+        margin: 0 2rem 2rem 2rem;
     }
 }

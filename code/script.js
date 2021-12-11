@@ -18,7 +18,7 @@ homeSectionTimeline
   .from(".home-section-overlay", {duration: 1, y: "0%", ease: "power 1", opacity: 1})
   .from(".home-section-titles h1", {})
   .from(".home-section-titles h2", {})
-  .from(".home-section-titles a", {})
+  .from(".home-section-titles a", {duration: 0.12})
   .from(".home-section-memoji", {x: "10%", y: "0%"})
 
 // - - - ABOUT SECTION - - -
