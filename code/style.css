@@ -601,3 +601,80 @@ img{
         margin: 0 2rem 2rem 2rem;
     }
 }
+
+/* - - - CONTACT SECTION - - - */
+#contact-section{
+    padding: 4rem 2rem 4rem 2rem;
+    background-color: #E0F19C;
+}
+
+.contact-section-title h2{
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.contact-section-title p{
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+}
+
+.accounts-container{
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.account{
+    width: 50%;
+    height: 6.5rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /*border: 0.1rem solid black;*/
+}
+
+.account a{
+    width: 5rem;
+    transition: 0.3s ease-in-out;
+}
+
+.account a:hover{
+    width: 6rem;
+}
+
+@media (min-width: 650px){
+    .accounts-container{
+        width: 100%;
+    }
+
+    .account{
+        width: 25%;
+    }
+}
+
+@media (min-width: 1000px){
+    .accounts-container{
+        width: 80%;
+    }
+
+    .account{
+        width: 20%;
+    }
+}
+
+@media (min-width: 1250px){
+    .account{
+        height: 8rem;
+    }
+
+    .account a{
+        width: 6rem;
+    }
+
+    .account a:hover{
+        width: 7rem;
+    }
+}
