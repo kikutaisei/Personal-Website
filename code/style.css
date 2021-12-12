@@ -514,7 +514,12 @@ img{
     }
 
     .language{
-        width: 30%;
+        width: 25%;
+    }
+
+    .project-description div{
+        width: 80%;
+        margin: 0 auto 2rem auto;
     }
 }
 
@@ -524,19 +529,7 @@ img{
     }
 
     .skills-container{
-        width: 70%;
-    }
-
-    .language{
-        height: 10rem;
-    }
-    
-    .language img{
-        width: 8rem;
-    }
-    
-    .language img:hover{
-        width: 9rem;
+        width: 80%;
     }
 
     .project{
