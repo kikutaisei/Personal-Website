@@ -53,3 +53,94 @@ const slideShow = {
   }
 }
 slideShow.showSlide(this.slideIndex);
+
+// - - - SCROLL TRIGGER ANIMATIONS - - -
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.from(".about-section-title", {
+  scrollTrigger: {
+    trigger: ".about-section-title",
+    toggleActions: "restart none restart none",
+  },
+  duration: 1,
+  y: "50%",
+  ease: "power 1",
+  opacity: 0
+});
+
+gsap.from(".introduction", {
+  scrollTrigger: {
+    trigger: ".introduction",
+    toggleActions: "restart none restart none",
+  },
+  duration: 1,
+  x: "-2%",
+  ease: "power 1",
+  opacity: 0
+});
+
+gsap.from(".my-background", {
+  scrollTrigger: {
+    trigger: ".my-background",
+    toggleActions: "restart none restart none",
+  },
+  duration: 1,
+  x: "2%",
+  ease: "power 1",
+  opacity: 0
+});
+
+gsap.from(".places-been", {
+  scrollTrigger: {
+    trigger: ".places-been",
+    toggleActions: "restart none restart none",
+  },
+  duration: 1,
+  y: "10%",
+  ease: "power 1",
+  opacity: 0
+});
+
+gsap.from(".portfolio-section-title", {
+  scrollTrigger: {
+    trigger: ".portfolio-section-title",
+    toggleActions: "restart none restart none",
+  },
+  duration: 1,
+  y: "100%",
+  ease: "power 1",
+  opacity: 0
+});
+
+gsap.from(".skills", {
+  scrollTrigger: {
+    trigger: ".skills",
+    toggleActions: "restart none restart none",
+  },
+  duration: 1,
+  x: "2%",
+  ease: "power 1",
+  opacity: 0
+});
+
+gsap.from(".projects", {
+  scrollTrigger: {
+    trigger: ".projects",
+    toggleActions: "restart none restart none",
+  },
+  duration: 1,
+  y: "5%",
+  ease: "power 1",
+  opacity: 0
+});
+
+gsap.from(".certificates", {
+  scrollTrigger: {
+    trigger: ".certificates",
+    toggleActions: "restart none restart none",
+  },
+  duration: 1,
+  x: "-2%",
+  ease: "power 1",
+  opacity: 0
+});
