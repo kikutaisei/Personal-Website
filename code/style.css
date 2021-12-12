@@ -119,7 +119,7 @@ img{
 #home-section{
     height: 100vh;
     position: relative; /* Makes sure overlapping content can be done by setting position as relative */
-    background-image: url(/media/image-1.JPG);
+    background-image: url(/resources/images/image-1.JPG);
     background-size: cover;
 }
 

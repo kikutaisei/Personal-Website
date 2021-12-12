@@ -63,9 +63,9 @@ gsap.from(".about-section-title", {
     toggleActions: "restart none restart none",
   },
   duration: 1,
-  y: "50%",
+  y: "80%",
   ease: "power 1",
-  opacity: 0
+  opacity: 0.5
 });
 
 gsap.from(".introduction", {
@@ -76,7 +76,7 @@ gsap.from(".introduction", {
   duration: 1,
   x: "-2%",
   ease: "power 1",
-  opacity: 0
+  opacity: 0.5
 });
 
 gsap.from(".my-background", {
@@ -87,7 +87,7 @@ gsap.from(".my-background", {
   duration: 1,
   x: "2%",
   ease: "power 1",
-  opacity: 0
+  opacity: 0.5
 });
 
 gsap.from(".places-been", {
@@ -98,7 +98,7 @@ gsap.from(".places-been", {
   duration: 1,
   y: "10%",
   ease: "power 1",
-  opacity: 0
+  opacity: 0.5
 });
 
 gsap.from(".portfolio-section-title", {
@@ -107,9 +107,9 @@ gsap.from(".portfolio-section-title", {
     toggleActions: "restart none restart none",
   },
   duration: 1,
-  y: "100%",
+  y: "80%",
   ease: "power 1",
-  opacity: 0
+  opacity: 0.5
 });
 
 gsap.from(".skills", {
@@ -120,7 +120,7 @@ gsap.from(".skills", {
   duration: 1,
   x: "2%",
   ease: "power 1",
-  opacity: 0
+  opacity: 0.5
 });
 
 gsap.from(".projects", {
@@ -131,7 +131,7 @@ gsap.from(".projects", {
   duration: 1,
   y: "5%",
   ease: "power 1",
-  opacity: 0
+  opacity: 0.5
 });
 
 gsap.from(".certificates", {
@@ -142,5 +142,27 @@ gsap.from(".certificates", {
   duration: 1,
   x: "-2%",
   ease: "power 1",
-  opacity: 0
+  opacity: 0.5
+});
+
+gsap.from(".contact-section-title", {
+  scrollTrigger: {
+    trigger: ".contact-section-title",
+    toggleActions: "restart none restart none",
+  },
+  duration: 1,
+  y: "50%",
+  ease: "power 1",
+  opacity: 0.5
+});
+
+gsap.from(".accounts-container", {
+  scrollTrigger: {
+    trigger: ".accounts-container",
+    toggleActions: "restart none restart none",
+  },
+  duration: 1,
+  y: "30%",
+  ease: "power 1",
+  opacity: 0.5
 });
