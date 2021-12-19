@@ -12,6 +12,10 @@ body{
     text-align: center;
 }
 
+p{
+    line-height: 1.75;
+}
+
 img{
     object-fit: cover;
 }
@@ -273,8 +277,8 @@ img{
 
 .slide div{
     height: 1rem;
-    padding-top: 0.2rem;
-    font-size: 1.2rem;
+    padding-top: 0.3rem;
+    font-size: 1rem;
 }
 
 .prev-button, .next-button{
@@ -346,8 +350,13 @@ img{
         height: 30rem;
     }
 
+    .prev-button, .next-button{
+        top: 45%;
+    }
+
     .slide div{
         padding-top: 0.5rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -382,7 +391,7 @@ img{
     }
 
     .slide div{
-        padding-top: 0.6rem;
+        padding-top: 0.7rem;
     }
 }
 
@@ -440,7 +449,7 @@ img{
 }
 
 .project{
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -524,7 +533,7 @@ img{
 }
 
 @media (min-width: 1000px){
-    #potfolio-section{
+    #portfolio-section{
         padding: 4rem 10rem 2rem 10rem;
     }
 
@@ -533,7 +542,7 @@ img{
     }
 
     .project{
-        margin-bottom: 2.5rem;
+        margin-bottom: 3.5rem;
     }
 
     .project-description div{
@@ -564,7 +573,7 @@ img{
     }
 
     .project{
-        margin-bottom: 3rem;
+        margin-bottom: 4rem;
         flex-direction: row;
     }
 
@@ -626,7 +635,6 @@ img{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    /*border: 0.1rem solid black;*/
 }
 
 .account a{
